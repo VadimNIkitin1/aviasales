@@ -39,6 +39,7 @@
     "react/state-in-constructor": "off",
     "no-plusplus": "off",
     "no-console": "off",
+    "jsx-a11y/label-has-associated-control": "off",
     "no-underscore-dangle": "off",
     "no-return-await": "off",
     "import/prefer-default-export": "off",
@@ -55,14 +56,7 @@
     "import/order": [
       2,
       {
-        "groups": [
-          "builtin",
-          "external",
-          "internal",
-          "parent",
-          "sibling",
-          "index"
-        ],
+        "groups": ["builtin", "external", "internal", "parent", "sibling", "index"],
         "newlines-between": "always"
       }
     ]

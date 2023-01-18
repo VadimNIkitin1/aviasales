@@ -1,0 +1,23 @@
+.App {
+  font-family: 'Open Sans';
+  text-transform: uppercase;
+  background: #f3f7fa;
+}
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logo {
+  margin: 50px auto;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  display: flex;
+  justify-content: center;
+}
