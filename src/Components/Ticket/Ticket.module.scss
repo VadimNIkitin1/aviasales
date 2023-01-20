@@ -1,0 +1,65 @@
+$blue: #2196f3;
+$grey: #a0b0b9;
+$white: #ffffff;
+$dark-grey: #4a4a4a;
+$light-blue: #f1fcff;
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+@mixin flex-col-betw {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Ticket {
+  padding: 20px;
+  background: $white;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.header {
+  @include flex-col-betw();
+  margin-bottom: 20px;
+}
+
+.price {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 24px;
+  color: $blue;
+}
+
+.main-ticket {
+  @include flex-col-betw();
+  flex-direction: row;
+  margin-bottom: 10px;
+}
+
+.flight {
+  @include flex-column();
+  &__terminals {
+    color: $grey;
+  }
+}
+
+.route {
+  @include flex-column();
+  &__title {
+    color: $grey;
+  }
+  &__time {
+    text-transform: none;
+  }
+}
+
+.transfers {
+  @include flex-column();
+  &__count {
+    color: $grey;
+  }
+}

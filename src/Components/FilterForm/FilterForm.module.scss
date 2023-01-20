@@ -1,15 +1,17 @@
+@import '../Ticket/Ticket.module.scss';
+
 .FilterForm {
-  display: flex;
-  flex-direction: column;
+  @include flex-column;
   padding: 20px 0 0 0px;
   width: 232px;
   height: 272px;
-  background: #ffffff;
+  background: $white;
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
   margin-right: 20px;
   text-transform: none;
 }
+
 .title {
   font-weight: 600;
   font-size: 12px;
@@ -17,17 +19,19 @@
   margin-bottom: 20px;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  color: #4a4a4a;
+  color: $dark-grey;
   padding-left: 20px;
 }
+
 input {
   width: 20px;
   height: 20px;
   cursor: pointer;
   appearance: none;
-  border: 1px solid #2196f3;
+  border: 1px solid $blue;
   border-radius: 2px;
 }
+
 .input-chek::after {
   position: absolute;
   content: '✓';
@@ -35,28 +39,23 @@ input {
   left: 25px;
   width: 12px;
   height: 8px;
-  color: #2196f3;
+  color: $blue;
 }
+
 .checkbox {
-  position: relative;
   display: flex;
   align-items: center;
+  position: relative;
   justify-content: flex-start;
   column-gap: 10px;
   padding: 10px 0 10px 20px;
 }
+
 .checkbox p {
-  color: #4a4a4a;
+  color: $dark-grey;
 }
+
 .checkbox:hover {
   cursor: pointer;
-  background-color: #f1fcff;
-}
-.cust-checkbox {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 25px;
-  width: 25px;
-  background-color: #eee;
+  background-color: $light-blue;
 }

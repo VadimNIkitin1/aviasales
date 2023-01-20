@@ -1,3 +1,5 @@
+@import './Components/Ticket/Ticket.module.scss';
+
 .App {
   font-family: 'Open Sans';
   text-transform: uppercase;
@@ -12,8 +14,7 @@
   margin: 50px auto;
 }
 .main {
-  display: flex;
-  flex-direction: column;
+  @include flex-column;
   justify-content: center;
   align-items: center;
 }

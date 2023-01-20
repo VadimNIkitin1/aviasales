@@ -1,3 +1,4 @@
+@import '../Ticket/Ticket.module.scss';
 button {
   font-weight: 600;
   font-size: 12px;
@@ -15,9 +16,9 @@ button {
   text-transform: uppercase;
 }
 
-button:target {
-  color: #fff;
-  background-color: #2196f3;
+button:active {
+  color: $white;
+  background-color: $blue;
 }
 
 .SortTabs {

@@ -1,11 +1,12 @@
 import React from 'react';
 
 import Ticket from '../Ticket/Ticket';
-import './TicketList.css';
+
+import styles from './TicketList.module.scss';
 
 export default function TicketList() {
   return (
-    <div className="TicketList">
+    <div className={styles.TicketList}>
       <Ticket />
       <Ticket />
       <Ticket />

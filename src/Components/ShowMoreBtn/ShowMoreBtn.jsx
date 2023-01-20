@@ -1,10 +1,11 @@
 import React from 'react';
-import './ShowMoreBtn.css';
+
+import styles from './ShowMoreBtn.module.scss';
 
 export default function ShowMoreBtn() {
   return (
     <div>
-      <button className="ShowMoreBtn">Показать еще 5 билетов!</button>
+      <button className={styles.ShowMoreBtn}>Показать еще 5 билетов!</button>
     </div>
   );
 }
