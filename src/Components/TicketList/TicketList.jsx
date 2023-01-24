@@ -4,13 +4,10 @@ import Ticket from '../Ticket/Ticket';
 
 import styles from './TicketList.module.scss';
 
-export default function TicketList() {
+export default function TicketList({ tickets }) {
+  console.log(tickets);
   return (
     <div className={styles.TicketList}>
-      <Ticket />
-      <Ticket />
-      <Ticket />
-      <Ticket />
       <Ticket />
     </div>
   );

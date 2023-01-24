@@ -12,20 +12,11 @@ export async function getSearchId() {
   return null;
 }
 
-export async function getAllTickets(id) {
-  const result = [];
-  try {
-    const response = await fetch(`${_ticketApi}searchId=${id}`);
-    const data = await response.json();
-    if (data.stop === false) {
-      result.push(data.tickets);
-      result.push(...(await getAllTickets(id)));
-    } else {
-      return result;
-    }
-  } catch (err) {
-    result.push(...(await getAllTickets(id)));
-    console.log(err);
+export async function getTickets(id) {
+  const response = await fetch(`${_ticketApi}searchId=${id}`);
+  if (!response.ok) {
+    throw new Error(response.statusText);
   }
-  return result;
+
+  return await response.json();
 }

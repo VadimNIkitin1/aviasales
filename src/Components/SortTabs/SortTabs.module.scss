@@ -16,19 +16,30 @@ button {
   text-transform: uppercase;
 }
 
-button:active {
-  color: $white;
-  background-color: $blue;
-}
-
 .SortTabs {
   display: flex;
   align-items: center;
   text-align: center;
 }
-.most-chip {
+.cheap {
   border-radius: 5px 0 0 5px;
+  &__active {
+    color: $white;
+    background-color: $blue;
+    border-radius: 5px 0 0 5px;
+  }
 }
-.optimum {
+.fast {
+  &__active {
+    color: $white;
+    background-color: $blue;
+  }
+}
+.optimal {
   border-radius: 0 5px 5px 0;
+  &__active {
+    color: $white;
+    background-color: $blue;
+    border-radius: 0 5px 5px 0;
+  }
 }
