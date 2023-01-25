@@ -2,15 +2,10 @@ import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { TransfersFilter } from '../../Common/transfersFilter';
+import { isAllTransfersChecked } from '../../Common/utils';
 import { setFilters } from '../../Store/Reducers/transfersSlice';
 
 import styles from './FilterForm.module.scss';
-
-const isAllChecked = (transfers) => {
-  return Object.values(TransfersFilter).every(
-    (filter) => transfers.includes(filter) || filter === TransfersFilter.All
-  );
-};
 
 export default function FilterForm() {
   const dispatch = useDispatch();
@@ -19,7 +14,7 @@ export default function FilterForm() {
   const onFilterChange = (e) => {
     const { checked, name } = e.target;
     if (name === TransfersFilter.All) {
-      if (isAllChecked(transfers)) {
+      if (isAllTransfersChecked(transfers)) {
         dispatch(setFilters([]));
         return;
       }
@@ -49,7 +44,7 @@ export default function FilterForm() {
           type="checkbox"
           name={TransfersFilter.All}
           onChange={onFilterChange}
-          checked={isAllChecked(transfers)}
+          checked={isAllTransfersChecked(transfers)}
         />
         <span className={styles.checkboxDisplay} />
         <p>Все</p>

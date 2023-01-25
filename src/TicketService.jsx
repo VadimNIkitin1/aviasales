@@ -1,4 +1,8 @@
+import cuid from 'cuid';
+
 const _ticketApi = 'https://aviasales-test-api.kata.academy/tickets?';
+
+const logoUrl = 'http://pics.avs.io/99/36';
 
 export async function getSearchId() {
   try {
@@ -18,5 +22,10 @@ export async function getTickets(id) {
     throw new Error(response.statusText);
   }
 
-  return await response.json();
+  const data = await response.json();
+  const tickets = data.tickets.map((ticket) => {
+    return { ...ticket, id: cuid(), logoUrl: `${logoUrl}/${ticket.carrier}.png` };
+  });
+
+  return { tickets, stop: data.stop };
 }

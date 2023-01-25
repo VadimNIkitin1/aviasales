@@ -8,7 +8,7 @@ export default function TicketList({ tickets }) {
   return (
     <div className={styles.TicketList}>
       {tickets.map((ticket) => (
-        <Ticket ticket={ticket} />
+        <Ticket ticket={ticket} key={ticket.id} />
       ))}
     </div>
   );
