@@ -33,33 +33,3 @@ $light-blue: #f1fcff;
   line-height: 24px;
   color: $blue;
 }
-
-.main-ticket {
-  @include flex-col-betw();
-  flex-direction: row;
-  margin-bottom: 10px;
-}
-
-.flight {
-  @include flex-column();
-  &__terminals {
-    color: $grey;
-  }
-}
-
-.route {
-  @include flex-column();
-  &__title {
-    color: $grey;
-  }
-  &__time {
-    text-transform: none;
-  }
-}
-
-.transfers {
-  @include flex-column();
-  &__count {
-    color: $grey;
-  }
-}
