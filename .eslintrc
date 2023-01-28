@@ -39,7 +39,7 @@
     "react/state-in-constructor": "off",
     "no-plusplus": "off",
     "no-unused-vars": "warn",
-    "no-console": "off",
+    "no-console": "warn",
     "no-param-reassign": "off",
     "jsx-a11y/label-has-associated-control": "off",
     "no-underscore-dangle": "off",

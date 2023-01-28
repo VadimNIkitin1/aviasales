@@ -1,5 +1,3 @@
-// ENUM
-
 export const TransfersFilter = {
   All: 'all',
   Without: 'without',

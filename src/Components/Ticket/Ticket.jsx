@@ -5,11 +5,10 @@ import TicketSegments from '../TicketSegments/TicketSegments';
 import styles from './Ticket.module.scss';
 
 export default function Ticket({ ticket }) {
-  // console.log(ticket);
   return (
     <div className={styles.Ticket}>
       <header className={styles.header}>
-        <span className={styles.price}>{`${ticket.price} р`}</span>
+        <span className={styles.price}>{`${ticket.price.toLocaleString()}р`}</span>
         <img src={ticket.logoUrl} alt="Company Logo" />
       </header>
       {ticket.segments.map((segments, i) => (
